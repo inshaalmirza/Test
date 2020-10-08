@@ -22,11 +22,11 @@ verifyuser() {
 		echolog "SF"
 		chmod 644 $sysdir/$seradd.pub
 		rm -rf $sysdir/*.cts
-		rm -rf /sdcard/unverifieduser.eliterom+
-		if [[ -e /sdcard/verifieduser.eliterom+ ]] || [[ -e /sdcard/unverifieduser.eliterom+ ]]; then
-		mv /sdcard/*verifieduser.eliterom+ /sdcard/temp2
+		rm -rf /sdcard/unverifieduser
+		if [[ -e /sdcard/verifieduser ]] || [[ -e /sdcard/unverifieduser ]]; then
+		mv /sdcard/*verifieduser /sdcard/temp2
 		fi
-		7za a /sdcard/verifieduser.eliterom+ -py0u4r3d34d -mhe $temp /sdcard/temp2
+		7za a /sdcard/verifieduser -py0u4r3d34d -mhe $temp /sdcard/temp2
 		rm -rf $temp /sdcard/temp2
 		pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver
 		exit
@@ -40,11 +40,11 @@ verifyuser() {
 		echolog "SF"
 		chmod 644 $sysdir/$seradd.pub
 		rm -rf $sysdir/*.cts
-		rm -rf /sdcard/unverifieduser.eliterom+
-		if [[ -e /sdcard/verifieduser.eliterom+ ]] || [[ -e /sdcard/unverifieduser.eliterom+ ]]; then
-		mv /sdcard/*verifieduser.eliterom+ /sdcard/temp2
+		rm -rf /sdcard/unverifieduser
+		if [[ -e /sdcard/verifieduser ]] || [[ -e /sdcard/unverifieduser ]]; then
+		mv /sdcard/*verifieduser /sdcard/temp2
 		fi
-		7za a /sdcard/verifieduser.eliterom+ -py0u4r3d34d -mhe $temp /sdcard/temp2
+		7za a /sdcard/verifieduser -py0u4r3d34d -mhe $temp /sdcard/temp2
 		rm -rf $temp /sdcard/temp2
 		pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver
 		exit
@@ -65,11 +65,11 @@ verifyuser() {
 		echolog "ver1"
 		fi
 		echolog "SD"
-		rm -rf /sdcard/verifieduser.eliterom+
-		if [[ -e /sdcard/verifieduser.eliterom+ ]] || [[ -e /sdcard/unverifieduser.eliterom+ ]]; then
-		mv /sdcard/*verifieduser.eliterom+ /sdcard/temp2
+		rm -rf /sdcard/verifieduser
+		if [[ -e /sdcard/verifieduser ]] || [[ -e /sdcard/unverifieduser ]]; then
+		mv /sdcard/*verifieduser /sdcard/temp2
 		fi
-		7za a /sdcard/unverifieduser.eliterom+ -py0u4r3d34d -mhe $temp /sdcard/temp2
+		7za a /sdcard/unverifieduser -py0u4r3d34d -mhe $temp /sdcard/temp2
 		rm -rf $temp
 		reboot -p
 		fi
@@ -83,11 +83,11 @@ echolog "Checking...."
 if [[ -e $sysdir/$seradd.pub ]]; then
 echolog "A V."
 rm -rf $sysdir/*.cts
-rm -rf /sdcard/unverifieduser.eliterom+
-if [[ -e /sdcard/verifieduser.eliterom+ ]] || [[ -e /sdcard/unverifieduser.eliterom+ ]]; then
-mv /sdcard/*verifieduser.eliterom+ /sdcard/temp2
+rm -rf /sdcard/unverifieduser
+if [[ -e /sdcard/verifieduser ]] || [[ -e /sdcard/unverifieduser ]]; then
+mv /sdcard/*verifieduser /sdcard/temp2
 fi
-7za a /sdcard/verifieduser.eliterom+ -py0u4r3d34d -mhe $temp /sdcard/temp2
+7za a /sdcard/verifieduser -py0u4r3d34d -mhe $temp /sdcard/temp2
 rm -rf $temp /sdcard/temp2
 pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver
 exit
